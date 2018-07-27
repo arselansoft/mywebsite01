@@ -26,6 +26,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+var bcrypt = require('bcrypt-nodejs')
+	
 //get file css - design
 app.use('/css', express.static(__dirname + '/css'));	
 
@@ -45,9 +47,10 @@ app.post('/register', function (req, res, next) {
 	con.connect(function(err) {
 		if (err) throw err;
 		console.log("Connected!");
-	
+		var password = bcrypt.hashSync(req.body.password);
+		
 		var usRegister = [
-			[req.body.username, req.body.password, 'Registered Web']
+			[req.body.username, password, 'Registered Web']
 		];
 	
 		var sql = "INSERT INTO users (username, password, keterangan) VALUES ?";
@@ -56,8 +59,7 @@ app.post('/register', function (req, res, next) {
 			if (err) throw err;
 			console.log(result);
 		});
-	});
-	
+	});	
 	
 	// console.log('Username: ' + req.body.username);
 	// console.log('Password: ' + req.body.password);
