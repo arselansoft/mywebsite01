@@ -1,0 +1,113 @@
+/* Style for my exercise build web right way */
+body {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	background-color: #ee1232;
+	line-height: 125%;
+	padding: 15px;
+	/* border: 4px solid navy; */
+}
+
+h1, h2, h3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: navy;
+	color: white;
+}
+
+/* ul { */
+	/* display: inline-block; */
+	/* margin: 0; */
+/* } */
+
+li {
+	font-size: small;
+}
+
+p {
+	font-size: small;
+	color: navy;
+}
+
+#tagline p {
+	font-style: italic;
+	font-family: Georgia, Times, serif;
+	background-color: #bed8f3;
+	border-top: 3px solid #7da5d8;
+	border-bottom: 3px solid #7da5d8;
+}
+
+#navigation a {
+	text-decoration: none;
+}
+
+#navigation, #bodycontent, #header {
+	position: absolute;
+}
+
+#navigation {
+	width: 180px;
+	border: 1px dotted navy;
+	background-color: #7da5d8;
+}
+
+#navigation, #bodycontent {
+	top: 200px;
+}
+
+#bodycontent {
+	left: 240px;
+}
+
+#header {
+	border-top: 3px solid #7da5d8;
+}
+
+#nav {
+	float: right;
+	width: 300px;
+	background-color: yellow;
+}
+
+a {
+	font-weight: bold;
+	/* color: black; */
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: gray;
+}
+
+a:hover {
+	text-decoration: none;
+	color: white;
+	background-color: navy;
+}
+
+a:active {
+	color: aqua;
+	background-color: navy;
+}
+
+/* menampilkan warna garis pada kotak inputan */
+input[required], input:required {
+	border: 1px solid #1e0;
+}
+
+.fun {
+  color: #339999;
+  font-family: Georgia, Times, serif;
+  letter-spacing: 0.05em;
+}
+
+.attentiongrab {
+	width: 50%;
+	font-weight: bold;
+}
+
+.feature {
+	float: right;
+	margin: 10px;
+}
